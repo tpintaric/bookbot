@@ -2,8 +2,14 @@
 ** Snippets & Explanations
 *** Read Files
 - with block can be used to open file:
-- We assign variable to the text we obtain by reading the file .read() 
+- We assign variable to the text we obtain by reading the file .read()
+- with block will auto-close the file when done reading it, to
+   preserve resources
+  
 #+BEGIN_SRC python
 with open("") as f:
     book_content = f.read()
 #+END_SRC
+*** Refactoring
+- Refactoring is a fancy word for "rewriting your god-awful code so it's not so terrible." Refactoring doesn't change the behavior of your code, just the way it's written.
+- 
