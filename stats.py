@@ -1,7 +1,8 @@
 
 def get_book_words(entire_book):
     num_words = len(entire_book.split())
-    print(f"{num_words} words found in the document")
+    #print(f"{num_words} words found in the document")
+    return num_words
 
 def get_book_chars(entire_book):
     book_char_stats = {}
@@ -31,7 +32,21 @@ def sorted_book_chars(book_char_stats):
     # book_chars_alpha.sort(reverse=True, key=sort_by)
     #print(book_chars_alpha)
 
-    print(sorted_chars_alpha)
+    #print(sorted_chars_alpha)
     #print(book_chars_alpha) 
     
-    #return sorted_book_chars
+    return sorted_chars_alpha
+
+def report(word_count, sorted_chars, file_name):
+    print("============ BOOKBOT ============")
+    print(f"Analyzing book found at {file_name}...")
+    print("----------- Word Count ----------")
+    print(f"Found {word_count} total words")
+    print("--------- Character Count -------")
+
+    for s in sorted_chars:
+        print(f"{s["char"]}: {s["num"]}")
+        # {"char":key, "num":val}
+        #print(f"{s["char"]}: {s["num"]}")
+    
+    print("============= END ===============")
